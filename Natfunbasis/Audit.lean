@@ -1,0 +1,331 @@
+import Natfunbasis.Basic
+
+/-!
+# Kernel audit
+
+These commands expose the statements and axiom dependencies of the strongest
+completed unconditional and conditional results. In particular, the
+normal-form package remains an explicit argument of every theorem that uses
+the unformalized Wilkie/AJK input.
+-/
+
+#print Natfunbasis.UnaryExpr.addAtomic_factors
+#print axioms Natfunbasis.UnaryExpr.addAtomic_factors
+
+#print Natfunbasis.UnaryExpr.addAtomic_of_pow_posConst
+#print axioms Natfunbasis.UnaryExpr.addAtomic_of_pow_posConst
+
+#print Natfunbasis.HSIDerives.sound
+#print axioms Natfunbasis.HSIDerives.sound
+
+#print Natfunbasis.hsiDerives_semEq
+#print axioms Natfunbasis.hsiDerives_semEq
+
+#print Natfunbasis.NormalizerCore.semEq_of_normalize_eq
+#print axioms Natfunbasis.NormalizerCore.semEq_of_normalize_eq
+
+#print Natfunbasis.NormalizerCore.PowerDerivations.hsi_nonemptyProduct_pow_nonemptySum
+#print axioms Natfunbasis.NormalizerCore.PowerDerivations.hsi_nonemptyProduct_pow_nonemptySum
+
+#print Natfunbasis.NormalizerCore.rawPolynomial_subst
+#print axioms Natfunbasis.NormalizerCore.rawPolynomial_subst
+
+#print Natfunbasis.NormalizerCore.eval_normalize
+#print axioms Natfunbasis.NormalizerCore.eval_normalize
+
+#print Natfunbasis.NormalizerCore.exists_exact_positive_irreducible_factorization
+#print axioms Natfunbasis.NormalizerCore.exists_exact_positive_irreducible_factorization
+
+#print Natfunbasis.Wilkie.exists_classified_positive_irreducible_factorization
+#print axioms Natfunbasis.Wilkie.exists_classified_positive_irreducible_factorization
+
+#print Natfunbasis.Wilkie.PositiveIrreducibleFactor.auxiliary_or_existsUnique_w2
+#print axioms Natfunbasis.Wilkie.PositiveIrreducibleFactor.auxiliary_or_existsUnique_w2
+
+#print Natfunbasis.Wilkie.NonconstantMonomial.product_toGlobal
+#print axioms Natfunbasis.Wilkie.NonconstantMonomial.product_toGlobal
+
+#print Natfunbasis.Wilkie.PositiveIrreducibleFactor.exists_flattened_generator
+#print axioms Natfunbasis.Wilkie.PositiveIrreducibleFactor.exists_flattened_generator
+
+#print Natfunbasis.Wilkie.exists_powerBranch_grid_identity
+#print axioms Natfunbasis.Wilkie.exists_powerBranch_grid_identity
+
+#print Natfunbasis.Wilkie.StageNatPolynomial.eq_C_constantCoeff_add_monomialSum
+#print axioms Natfunbasis.Wilkie.StageNatPolynomial.eq_C_constantCoeff_add_monomialSum
+
+#print Natfunbasis.Wilkie.StageNatPolynomial.evalInt_eq_constant_add_monomials
+#print axioms Natfunbasis.Wilkie.StageNatPolynomial.evalInt_eq_constant_add_monomials
+
+#print Natfunbasis.Wilkie.exists_classified_positive_irreducible_factor_list
+#print axioms Natfunbasis.Wilkie.exists_classified_positive_irreducible_factor_list
+
+#print Natfunbasis.Wilkie.exists_arbitraryPolynomial_powerBranch_identity
+#print axioms Natfunbasis.Wilkie.exists_arbitraryPolynomial_powerBranch_identity
+
+#print Natfunbasis.Wilkie.rename_toNatStage
+#print axioms Natfunbasis.Wilkie.rename_toNatStage
+
+#print Natfunbasis.NormalForm.ExpressionNormalizerAssembly.canonicalNonconstantPowerStep
+#print axioms Natfunbasis.NormalForm.ExpressionNormalizerAssembly.canonicalNonconstantPowerStep
+
+#print Natfunbasis.NormalForm.canonicalRaw_represents_real
+#print axioms Natfunbasis.NormalForm.canonicalRaw_represents_real
+
+#print Natfunbasis.NormalForm.canonicalPrecertificate
+#print axioms Natfunbasis.NormalForm.canonicalPrecertificate
+
+#print Natfunbasis.NormalForm.canonicalCertificate
+#print axioms Natfunbasis.NormalForm.canonicalCertificate
+
+#print Natfunbasis.NormalForm.canonical_pow_addAtomic
+#print axioms Natfunbasis.NormalForm.canonical_pow_addAtomic
+
+#print Natfunbasis.NormalForm.canonical_pow_addAtomic_of_finiteOrIdentical
+#print axioms Natfunbasis.NormalForm.canonical_pow_addAtomic_of_finiteOrIdentical
+
+#print Natfunbasis.NormalForm.canonical_exists_basisSum_unique
+#print axioms Natfunbasis.NormalForm.canonical_exists_basisSum_unique
+
+#print Natfunbasis.NormalForm.canonical_exists_basisSum_unique_of_finiteOrIdentical
+#print axioms Natfunbasis.NormalForm.canonical_exists_basisSum_unique_of_finiteOrIdentical
+
+#print Natfunbasis.Wilkie.UnaryExpr.evalReal_isPositiveAnalytic
+#print axioms Natfunbasis.Wilkie.UnaryExpr.evalReal_isPositiveAnalytic
+
+#print Natfunbasis.Wilkie.originalTermIntegerToReal_of_finiteOrIdentical
+#print axioms Natfunbasis.Wilkie.originalTermIntegerToReal_of_finiteOrIdentical
+
+#print Natfunbasis.Wilkie.PositiveAnalyticFunction.derivation
+#print axioms Natfunbasis.Wilkie.PositiveAnalyticFunction.derivation
+
+#print Natfunbasis.Wilkie.FractionDerivation.extend_div_algebraMap
+#print axioms Natfunbasis.Wilkie.FractionDerivation.extend_div_algebraMap
+
+#print Natfunbasis.Wilkie.PositiveAnalyticFractionField.derivation_eq_zero_iff_mem_range_algebraMap_real
+#print axioms Natfunbasis.Wilkie.PositiveAnalyticFractionField.derivation_eq_zero_iff_mem_range_algebraMap_real
+
+#print Natfunbasis.Wilkie.mul_deriv_positiveRpowExtension
+#print axioms Natfunbasis.Wilkie.mul_deriv_positiveRpowExtension
+
+#print Natfunbasis.Wilkie.GeneratorSequence.realTau_isPositiveAnalytic
+#print axioms Natfunbasis.Wilkie.GeneratorSequence.realTau_isPositiveAnalytic
+
+#print Natfunbasis.Wilkie.canonicalAnalyticCoordinates
+#print axioms Natfunbasis.Wilkie.canonicalAnalyticCoordinates
+
+#print Natfunbasis.Wilkie.PositiveAnalyticFunction.mul_derivative_log
+#print axioms Natfunbasis.Wilkie.PositiveAnalyticFunction.mul_derivative_log
+
+#print Natfunbasis.Wilkie.PositiveAnalyticFunction.mul_derivative_rpow
+#print axioms Natfunbasis.Wilkie.PositiveAnalyticFunction.mul_derivative_rpow
+
+#print Natfunbasis.Wilkie.PositiveAnalyticFractionField.derivation_log
+#print axioms Natfunbasis.Wilkie.PositiveAnalyticFractionField.derivation_log
+
+#print Natfunbasis.Wilkie.PositiveAnalyticFractionField.derivation_rpow
+#print axioms Natfunbasis.Wilkie.PositiveAnalyticFractionField.derivation_rpow
+
+#print Natfunbasis.Wilkie.DifferentialIntermediateField.deriv_inclusion
+#print axioms Natfunbasis.Wilkie.DifferentialIntermediateField.deriv_inclusion
+
+#print Natfunbasis.Wilkie.DifferentialIntermediateField.containConstantsOfLE
+#print axioms Natfunbasis.Wilkie.DifferentialIntermediateField.containConstantsOfLE
+
+#print Natfunbasis.Wilkie.Proposition31.ratFunc_classification_of_crossEquation_of_transcendental_solution
+#print axioms Natfunbasis.Wilkie.Proposition31.ratFunc_classification_of_crossEquation_of_transcendental_solution
+
+#print Natfunbasis.Wilkie.Proposition31.ratFunc_classification_of_crossEquation_of_base_primitive
+#print axioms Natfunbasis.Wilkie.Proposition31.ratFunc_classification_of_crossEquation_of_base_primitive
+
+#print Natfunbasis.Wilkie.Proposition31.irreducible_dvd_deriv_of_rational_logEquation
+#print axioms Natfunbasis.Wilkie.Proposition31.irreducible_dvd_deriv_of_rational_logEquation
+
+#print Natfunbasis.Wilkie.Proposition31.denominator_associated_X_pow_of_rational_logEquation
+#print axioms Natfunbasis.Wilkie.Proposition31.denominator_associated_X_pow_of_rational_logEquation
+
+#print Natfunbasis.Wilkie.Proposition31.rationalFunction_proposition31_i
+#print axioms Natfunbasis.Wilkie.Proposition31.rationalFunction_proposition31_i
+
+#print Natfunbasis.Wilkie.Proposition31.simpleAdjoin_proposition31_i
+#print axioms Natfunbasis.Wilkie.Proposition31.simpleAdjoin_proposition31_i
+
+#print Natfunbasis.Wilkie.Proposition31II.rationalFunction_proposition31_ii_affine
+#print axioms Natfunbasis.Wilkie.Proposition31II.rationalFunction_proposition31_ii_affine
+
+#print Natfunbasis.Wilkie.Proposition31II.IntegralSlopeRigidity
+#print axioms Natfunbasis.Wilkie.Proposition31II.IntegralSlopeRigidity
+
+#print Natfunbasis.Wilkie.Proposition31II.rationalFunction_proposition31_ii_of_integralSlopeRigidity
+#print axioms Natfunbasis.Wilkie.Proposition31II.rationalFunction_proposition31_ii_of_integralSlopeRigidity
+
+#print Natfunbasis.Wilkie.Proposition31II.simpleAdjoin_proposition31_ii_of_integralSlopeRigidity
+#print axioms Natfunbasis.Wilkie.Proposition31II.simpleAdjoin_proposition31_ii_of_integralSlopeRigidity
+
+#print Natfunbasis.Wilkie.BaseRationalClassification.analyticX_simpleAdjoin_classification
+#print axioms Natfunbasis.Wilkie.BaseRationalClassification.analyticX_simpleAdjoin_classification
+
+#print Natfunbasis.Wilkie.Proposition32.proposition32_i
+#print axioms Natfunbasis.Wilkie.Proposition32.proposition32_i
+
+#print Natfunbasis.Wilkie.Proposition32.proposition32_ii
+#print axioms Natfunbasis.Wilkie.Proposition32.proposition32_ii
+
+#print Natfunbasis.Wilkie.PositiveAnalyticFractionField.derivation_logBaseAnalytic
+#print axioms Natfunbasis.Wilkie.PositiveAnalyticFractionField.derivation_logBaseAnalytic
+
+#print Natfunbasis.Wilkie.PositiveAnalyticFractionField.derivation_realTauAnalyticFunction
+#print axioms Natfunbasis.Wilkie.PositiveAnalyticFractionField.derivation_realTauAnalyticFunction
+
+#print Natfunbasis.Wilkie.OneVariableBaseField.F0_le_iff
+#print axioms Natfunbasis.Wilkie.OneVariableBaseField.F0_le_iff
+
+#print Natfunbasis.Wilkie.OneVariableBaseField.F0_containConstants
+#print axioms Natfunbasis.Wilkie.OneVariableBaseField.F0_containConstants
+
+#print Natfunbasis.Wilkie.OneVariableBaseField.x_algebraicIndependent
+#print axioms Natfunbasis.Wilkie.OneVariableBaseField.x_algebraicIndependent
+
+#print Natfunbasis.Wilkie.OneVariableBaseField.x_logX_algebraicIndependent
+#print axioms Natfunbasis.Wilkie.OneVariableBaseField.x_logX_algebraicIndependent
+
+#print Natfunbasis.Wilkie.GeneratorSequence.baseAnalytic_mem
+#print axioms Natfunbasis.Wilkie.GeneratorSequence.baseAnalytic_mem
+
+#print Natfunbasis.Wilkie.GeneratorSequence.exponentAnalytic_mem
+#print axioms Natfunbasis.Wilkie.GeneratorSequence.exponentAnalytic_mem
+
+#print Natfunbasis.Wilkie.GeneratorSequence.logBaseAnalytic_mem_of_fresh_le
+#print axioms Natfunbasis.Wilkie.GeneratorSequence.logBaseAnalytic_mem_of_fresh_le
+
+#print Natfunbasis.Wilkie.GeneratorSequence.finiteStageField_mono_step
+#print axioms Natfunbasis.Wilkie.GeneratorSequence.finiteStageField_mono_step
+
+#print Natfunbasis.Wilkie.GeneratorSequence.tau_mem_finiteStageField
+#print axioms Natfunbasis.Wilkie.GeneratorSequence.tau_mem_finiteStageField
+
+#print Natfunbasis.Wilkie.GeneratorSequence.freshLog_mem_finiteStageField
+#print axioms Natfunbasis.Wilkie.GeneratorSequence.freshLog_mem_finiteStageField
+
+#print Natfunbasis.Wilkie.GeneratorSequence.logBase_mem_finiteStageBeforeTau
+#print axioms Natfunbasis.Wilkie.GeneratorSequence.logBase_mem_finiteStageBeforeTau
+
+#print Natfunbasis.Wilkie.GeneratorSequence.deriv_mem_finiteStageField
+#print axioms Natfunbasis.Wilkie.GeneratorSequence.deriv_mem_finiteStageField
+
+#print Natfunbasis.Wilkie.GeneratorSequence.finiteStageField_toIntermediateField_eq_adjoin
+#print axioms Natfunbasis.Wilkie.GeneratorSequence.finiteStageField_toIntermediateField_eq_adjoin
+
+#print Natfunbasis.Wilkie.GeneratorSequence.algebraicIndepOn_stageGenerators_zero
+#print axioms Natfunbasis.Wilkie.GeneratorSequence.algebraicIndepOn_stageGenerators_zero
+
+#print Natfunbasis.Wilkie.GeneratorSequence.algebraicIndepOn_stageGenerators_succ
+#print axioms Natfunbasis.Wilkie.GeneratorSequence.algebraicIndepOn_stageGenerators_succ
+
+#print Natfunbasis.Wilkie.GeneratorSequence.freshLog_transcendental_of_not_mem
+#print axioms Natfunbasis.Wilkie.GeneratorSequence.freshLog_transcendental_of_not_mem
+
+#print Natfunbasis.Wilkie.GeneratorSequence.tau_powerRelation_of_isAlgebraic
+#print axioms Natfunbasis.Wilkie.GeneratorSequence.tau_powerRelation_of_isAlgebraic
+
+#print Natfunbasis.Wilkie.GeneratorSequence.algebraicIndependent_fractionCoordinates_of_transcendence
+#print axioms Natfunbasis.Wilkie.GeneratorSequence.algebraicIndependent_fractionCoordinates_of_transcendence
+
+#print Natfunbasis.Wilkie.canonicalWilkieIndependence_of_transcendence
+#print axioms Natfunbasis.Wilkie.canonicalWilkieIndependence_of_transcendence
+
+#print Natfunbasis.Wilkie.GeneratorSequence.freshBase_unique
+#print axioms Natfunbasis.Wilkie.GeneratorSequence.freshBase_unique
+
+#print Natfunbasis.Wilkie.GeneratorSequence.constant_original_fresh_or_repeated
+#print axioms Natfunbasis.Wilkie.GeneratorSequence.constant_original_fresh_or_repeated
+
+#print Natfunbasis.NormalPolynomial.weight_one_forbids_add
+#print axioms Natfunbasis.NormalPolynomial.weight_one_forbids_add
+
+#print Natfunbasis.exists_basisSum
+#print axioms Natfunbasis.exists_basisSum
+
+#print Natfunbasis.isBasis_of_addAtomic
+#print axioms Natfunbasis.isBasis_of_addAtomic
+
+#print Natfunbasis.BasisSum.basis_pow_of_nonconstant
+#print axioms Natfunbasis.BasisSum.basis_pow_of_nonconstant
+
+#print Natfunbasis.NormalPolynomial.monomialSum_eq_iff_perm
+#print axioms Natfunbasis.NormalPolynomial.monomialSum_eq_iff_perm
+
+#print Natfunbasis.AlgebraicIndependence.natAeval_injective
+#print axioms Natfunbasis.AlgebraicIndependence.natAeval_injective
+
+#print Natfunbasis.NormalForm.FixedFamilyCertificate.raw_eq_iff_semEq
+#print axioms Natfunbasis.NormalForm.FixedFamilyCertificate.raw_eq_iff_semEq
+
+#print Natfunbasis.NormalForm.exists_syntacticTower_of_isTower
+#print axioms Natfunbasis.NormalForm.exists_syntacticTower_of_isTower
+
+#print Natfunbasis.NormalForm.FixedFamilyPrecertificate.ofAlgebraicIndependent
+#print axioms Natfunbasis.NormalForm.FixedFamilyPrecertificate.ofAlgebraicIndependent
+
+#print Natfunbasis.NormalForm.FixedFamilyCertificate.toFaithfulNormalFormPackage
+#print axioms Natfunbasis.NormalForm.FixedFamilyCertificate.toFaithfulNormalFormPackage
+
+#print Natfunbasis.Wilkie.GeneratorSequence.index_unique_of_joint_derivation
+#print axioms Natfunbasis.Wilkie.GeneratorSequence.index_unique_of_joint_derivation
+
+#print Natfunbasis.Wilkie.PolynomialSemEq.eq
+#print axioms Natfunbasis.Wilkie.PolynomialSemEq.eq
+
+#print Natfunbasis.Wilkie.canonicalGeneratorSequence
+#print axioms Natfunbasis.Wilkie.canonicalGeneratorSequence
+
+#print Natfunbasis.Wilkie.GeneratorSequence.canonicalRealization
+#print axioms Natfunbasis.Wilkie.GeneratorSequence.canonicalRealization
+
+#print Natfunbasis.Wilkie.canonicalGeneratorSystem
+#print axioms Natfunbasis.Wilkie.canonicalGeneratorSystem
+
+#print Natfunbasis.Wilkie.GeneratorRealization.tau_pos
+#print axioms Natfunbasis.Wilkie.GeneratorRealization.tau_pos
+
+#print Natfunbasis.Wilkie.GeneratorSequence.integerTau_eq
+#print axioms Natfunbasis.Wilkie.GeneratorSequence.integerTau_eq
+
+#print Natfunbasis.Wilkie.GeneratorSequence.integerCoordinates_pos
+#print axioms Natfunbasis.Wilkie.GeneratorSequence.integerCoordinates_pos
+
+#print Natfunbasis.Wilkie.GeneratorRealization.tau_integer_compat
+#print axioms Natfunbasis.Wilkie.GeneratorRealization.tau_integer_compat
+
+#print Natfunbasis.Wilkie.canonicalCoordinates_integer_compat
+#print axioms Natfunbasis.Wilkie.canonicalCoordinates_integer_compat
+
+#print Natfunbasis.Wilkie.canonicalInteger_algebraicIndependent_of_real
+#print axioms Natfunbasis.Wilkie.canonicalInteger_algebraicIndependent_of_real
+
+#print Natfunbasis.Wilkie.integer_algebraicIndependent_of_real
+#print axioms Natfunbasis.Wilkie.integer_algebraicIndependent_of_real
+
+#print Natfunbasis.Wilkie.raw_eq_of_real_independence
+#print axioms Natfunbasis.Wilkie.raw_eq_of_real_independence
+
+#print Natfunbasis.NormalForm.addAtomic_iff_isBasis
+#print axioms Natfunbasis.NormalForm.addAtomic_iff_isBasis
+
+#print Natfunbasis.NormalForm.basisSum_terms_perm
+#print axioms Natfunbasis.NormalForm.basisSum_terms_perm
+
+#print Natfunbasis.NormalForm.exists_basisSum_unique
+#print axioms Natfunbasis.NormalForm.exists_basisSum_unique
+
+#print Natfunbasis.NormalForm.pow_addAtomic_of_basis_atomic
+#print axioms Natfunbasis.NormalForm.pow_addAtomic_of_basis_atomic
+
+#print Natfunbasis.NormalForm.pow_addAtomic
+#print axioms Natfunbasis.NormalForm.pow_addAtomic
+
+#print Natfunbasis.NormalForm.expr_pow_addAtomic
+#print axioms Natfunbasis.NormalForm.expr_pow_addAtomic
+
+#print Natfunbasis.NormalForm.expr_pow_variable_addAtomic
+#print axioms Natfunbasis.NormalForm.expr_pow_variable_addAtomic

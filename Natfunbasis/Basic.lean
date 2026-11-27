@@ -1,0 +1,49 @@
+import Natfunbasis.AlgebraicIndependence
+import Natfunbasis.CanonicalWilkieCoordinates
+import Natfunbasis.Equational
+import Natfunbasis.NormalizerCore
+import Natfunbasis.NormalFormConsequences
+import Natfunbasis.NormalFormConstruction
+import Natfunbasis.WilkieGenerators
+import Natfunbasis.WilkieFreshBases
+import Natfunbasis.PowerFactorClassification
+import Natfunbasis.PowerBranchEvaluation
+import Natfunbasis.PowerPolynomialReification
+import Natfunbasis.GlobalPowerNormalizer
+import Natfunbasis.CanonicalNormalizer
+import Natfunbasis.WilkieGeneratorExistence
+import Natfunbasis.WilkieIntegerEvaluation
+import Natfunbasis.WilkieIndependenceBridge
+import Natfunbasis.WilkieAnalyticPrerequisites
+import Natfunbasis.WilkieAnalyticDifferential
+import Natfunbasis.WilkieFractionDifferential
+import Natfunbasis.WilkieFractionConstants
+import Natfunbasis.OriginalTermAnalyticity
+import Natfunbasis.WilkieGeneratorAnalyticity
+import Natfunbasis.WilkieAnalyticPowerDifferential
+import Natfunbasis.WilkieDifferentialIntermediateField
+import Natfunbasis.WilkieProposition31
+import Natfunbasis.WilkieProposition31Full
+import Natfunbasis.WilkieRationalExtension
+import Natfunbasis.WilkieProposition31II
+import Natfunbasis.WilkieProposition32
+import Natfunbasis.WilkieGeneratorDifferentialEquations
+import Natfunbasis.WilkieOneVariableBaseField
+import Natfunbasis.WilkieOneVariableBaseIndependence
+import Natfunbasis.WilkieBaseRationalClassification
+import Natfunbasis.WilkieGeneratorFieldRelations
+import Natfunbasis.WilkieFiniteStageFields
+import Natfunbasis.WilkieStageAlgebraicIndependence
+import Natfunbasis.WilkieStageTranscendenceReductions
+import Natfunbasis.WilkieInfiniteIndependence
+
+set_option linter.style.header false
+
+/-!
+# Additive basis and natural-power atomicity
+
+Umbrella import for the completed elementary development, the unconditional
+core normalizer, the constructed one-variable W1--W3 generator system, the
+generic algebraic-independence bridge, and the consequences of an explicit
+one-variable normal-form package. No normal-form package is postulated.
+-/

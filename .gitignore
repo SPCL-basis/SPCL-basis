@@ -1,0 +1,14 @@
+/.lake
+.DS_Store
+tmp/
+_olean/
+_build.log
+lc.sh
+paper_12pages_backup/
+output/
+natural_power_atomicity_package1/
+natural_power_atomicity_package1.zip
+additive_basis_natural_functions.pdf
+paper/
+paper_before_revision/
+blueprints/
